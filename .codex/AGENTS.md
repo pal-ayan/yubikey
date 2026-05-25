@@ -8,6 +8,7 @@ This repo collects scripts, functions, implementation notes, and documentation f
 - Keep module-specific scripts, module README files, and module-local `docs/` directories inside that module.
 - Keep the root `README.md` as a high-level index and overview, not as module-specific usage documentation.
 - When adding a new module, update the root `README.md` module list and add a module README with prerequisites, usage, caveats, and validation status.
+- When adding, renaming, or removing a module, update the module dropdowns in `.github/ISSUE_TEMPLATE/bug_report.yml` and `.github/ISSUE_TEMPLATE/feature_request.yml`.
 
 ## License
 
@@ -53,6 +54,7 @@ This repo collects scripts, functions, implementation notes, and documentation f
 - Keep script logic explanations in separate Markdown files under the module-local `docs/` directory with Mermaid diagrams.
 - Documentation examples must use placeholders or generic values, not real terminal output copied from a user machine.
 - Keep GitHub issue templates under `.github/ISSUE_TEMPLATE/`, and keep safety warnings in those templates so users do not post secrets, key material, serial numbers, credential IDs, or personal command output.
+- Keep issue-template options current with repository modules. Update module choices, documentation area choices, labels, and contact links whenever the repository structure or security-reporting flow changes.
 - Maintain the caveat that Linux support is intended but only validated on macOS until that changes.
 
 ## Validation
