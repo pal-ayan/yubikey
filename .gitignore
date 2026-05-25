@@ -1,0 +1,16 @@
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Generated or recovered SSH security-key stubs
+id_*_sk*
+
+# Other common private key/container formats
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Temporary restore directories, if created inside the repo by mistake
+yk-ssh-restore.*
