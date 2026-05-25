@@ -19,3 +19,7 @@ The current FIDO2 SSH scripts are designed to be Linux-compatible, but they have
 This repository should not contain real YubiKey serial numbers, credential IDs, private keys, public key blobs, PINs, passphrases, tokens, local machine paths, or personal command output. Documentation examples should use placeholders or generic values.
 
 Generated SSH key stubs and common secret file formats are ignored by `.gitignore`, but always review changes before publishing.
+
+## License
+
+This repository is licensed under the GNU General Public License v3.0. See [LICENSE](LICENSE).

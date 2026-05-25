@@ -9,12 +9,19 @@ This repo collects scripts, functions, implementation notes, and documentation f
 - Keep the root `README.md` as a high-level index and overview, not as module-specific usage documentation.
 - When adding a new module, update the root `README.md` module list and add a module README with prerequisites, usage, caveats, and validation status.
 
+## License
+
+- The repository is licensed under the GNU General Public License v3.0.
+- Keep new scripts, modules, and documentation compatible with GPL-3.0.
+- Do not add dependencies, copied code, or generated artifacts with licenses that conflict with GPL-3.0.
+
 ## Security And Privacy
 
 - Do not commit personally identifiable information, real YubiKey serial numbers, real credential IDs, email addresses, usernames, local absolute home paths, public key blobs, private key files, passphrases, PINs, tokens, or command output containing any of those values.
 - Use placeholders in docs, for example `<serial>`, `<output-directory>`, `<user-id>`, and `<application-string>`.
 - Keep generated SSH key stubs and secret material out of the repo. The `.gitignore` intentionally excludes common generated key and secret file patterns.
 - Do not make scripts collect, store, echo, or log YubiKey PINs, FIDO2 PINs, PIV PINs, local key passphrases, management keys, recovery codes, or tokens. Sensitive prompts should remain owned by trusted tools such as `ykman`, `ssh-keygen`, or platform tools.
+- Keep `SECURITY.md` aligned with GitHub private vulnerability reporting and this repository's current module scope.
 - Before considering work ready for publication, scan for obvious sensitive material with `rg` patterns for names, emails, long hex strings, key markers, local paths, and large numeric identifiers.
 
 ## FIDO2 SSH Module Behavior
@@ -45,6 +52,7 @@ This repo collects scripts, functions, implementation notes, and documentation f
 - Do not embed the full scripts into documentation.
 - Keep script logic explanations in separate Markdown files under the module-local `docs/` directory with Mermaid diagrams.
 - Documentation examples must use placeholders or generic values, not real terminal output copied from a user machine.
+- Keep GitHub issue templates under `.github/ISSUE_TEMPLATE/`, and keep safety warnings in those templates so users do not post secrets, key material, serial numbers, credential IDs, or personal command output.
 - Maintain the caveat that Linux support is intended but only validated on macOS until that changes.
 
 ## Validation

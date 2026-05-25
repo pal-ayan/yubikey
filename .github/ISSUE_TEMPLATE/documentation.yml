@@ -1,0 +1,53 @@
+name: Documentation issue
+description: Report unclear, incomplete, outdated, or incorrect documentation.
+title: "docs: "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for README files, flow diagrams, examples, caveats, or usage instructions.
+
+        Documentation examples should use placeholders instead of real personal data or real device identifiers.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Documentation area
+      options:
+        - root README
+        - fido2-ssh README
+        - fido2-ssh flow diagrams
+        - repository guidelines
+        - other
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Page or section
+      description: Link or name the file/section if known.
+      placeholder: fido2-ssh/README.md, Restore Usage
+    validations:
+      required: false
+  - type: textarea
+    id: issue
+    attributes:
+      label: What should change?
+      description: Describe what is unclear, missing, outdated, or incorrect.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_text
+    attributes:
+      label: Suggested wording
+      description: Optional. Provide replacement wording or a suggested example using placeholders.
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: Any examples in this issue use placeholders instead of real serial numbers, credential IDs, keys, tokens, local paths, or personal command output.
+          required: true

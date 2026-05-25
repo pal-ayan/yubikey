@@ -1,0 +1,60 @@
+name: Feature request
+description: Suggest a new script, workflow, module, or enhancement.
+title: "feature: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for new functionality or improvements.
+
+        Do not include secrets, private key material, PINs, passphrases, tokens, real credential IDs, or real YubiKey serial numbers.
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      description: Which area would this affect?
+      options:
+        - fido2-ssh
+        - new module
+        - repository-wide tooling
+        - documentation
+    validations:
+      required: true
+  - type: input
+    id: module_name
+    attributes:
+      label: Proposed module or area
+      description: If this is for a new module, name the YubiKey application or workflow.
+      placeholder: piv, oath, fido2-ssh, repository-wide
+    validations:
+      required: false
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the behavior, commands, prompts, or documentation you want.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional. Mention other approaches or tools you considered.
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: This request does not include secrets, private key material, PINs, passphrases, tokens, real credential IDs, or real YubiKey serial numbers.
+          required: true

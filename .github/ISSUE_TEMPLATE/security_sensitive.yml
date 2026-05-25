@@ -1,0 +1,29 @@
+name: Security-sensitive issue
+description: Ask where to report a vulnerability or security-sensitive concern.
+title: "security: "
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not disclose vulnerabilities, secrets, private key material, PINs, passphrases, tokens, credential IDs, real YubiKey serial numbers, or exploit details in a public issue.
+
+        If this is a vulnerability or could help someone attack a user, stop here and use GitHub private vulnerability reporting:
+
+        https://github.com/pal-ayan/yubikey/security/advisories/new
+  - type: checkboxes
+    id: public_safe
+    attributes:
+      label: Public disclosure check
+      options:
+        - label: This issue does not disclose a vulnerability, exploit path, secret, private key material, PIN, passphrase, token, credential ID, or real YubiKey serial number.
+          required: true
+  - type: textarea
+    id: sanitized_summary
+    attributes:
+      label: Sanitized summary
+      description: If this is not a private vulnerability report, provide a high-level sanitized summary.
+      placeholder: I have a question about how to safely report...
+    validations:
+      required: true

@@ -1,0 +1,84 @@
+name: Bug report
+description: Report a reproducible problem with a script, tool, or documented workflow.
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem.
+
+        Do not include real YubiKey serial numbers, credential IDs, public key blobs, private key files, PINs, passphrases, tokens, local home paths, or unsanitized terminal output.
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      description: Which part of the repository is affected?
+      options:
+        - fido2-ssh
+        - repository documentation
+        - other or future module
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Repository version
+      description: Commit SHA, tag, or branch name where you observed the problem.
+      placeholder: main, v0.1.0, or a commit SHA
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe what went wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide sanitized steps that reproduce the issue.
+      placeholder: |
+        1. Run ...
+        2. Enter ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened? Paste only sanitized output.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include only non-sensitive environment details.
+      placeholder: |
+        OS:
+        Shell:
+        bash --version:
+        ssh-keygen -V or ssh -V:
+        ykman --version:
+        YubiKey model, if relevant:
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed real serial numbers, credential IDs, key material, PINs, passphrases, tokens, and local personal paths from this report.
+          required: true
