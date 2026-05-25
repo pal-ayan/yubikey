@@ -10,18 +10,6 @@ This repository is intended to grow into a collection of YubiKey-related tooling
 - [Generate flow documentation](fido2-ssh/docs/generate-script-flow.md): Mermaid diagram and explanation for creating resident SSH keys.
 - [Restore flow documentation](fido2-ssh/docs/restore-script-flow.md): Mermaid diagrams and explanation for recovering resident SSH key stubs and restoring comments.
 
-## Repository Layout
-
-```text
-.
-├── fido2-ssh/
-│   ├── generate_fido2_ssh_key_using_yubikey.sh
-│   ├── restore_fido2_ssh_keys_from_yubikey.sh
-│   ├── README.md
-│   └── docs/
-└── README.md
-```
-
 ## Platform Status
 
 The current FIDO2 SSH scripts are designed to be Linux-compatible, but they have only been validated on macOS so far. See the module README for prerequisites, usage, caveats, and validation notes.
