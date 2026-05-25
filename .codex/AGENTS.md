@@ -7,7 +7,7 @@ This repo collects scripts, functions, implementation notes, and documentation f
 - Keep each YubiKey workflow area in its own root-level module directory, for example `fido2-ssh/`.
 - Keep module-specific scripts, module README files, and module-local `docs/` directories inside that module.
 - Keep the root `README.md` as a high-level index and overview, not as module-specific usage documentation.
-- When adding a new module, update the root `README.md` module list and add a module README with prerequisites, usage, caveats, and validation status.
+- When adding a new module, update the root `README.md` module list and `CONTRIBUTING.md`, and add a module README with prerequisites, usage, caveats, and validation status.
 - When adding, renaming, or removing a module, update the module dropdowns in `.github/ISSUE_TEMPLATE/bug_report.yml` and `.github/ISSUE_TEMPLATE/feature_request.yml`.
 
 ## License
@@ -50,6 +50,8 @@ This repo collects scripts, functions, implementation notes, and documentation f
 
 - Keep the root `README.md` focused on the overall repository purpose and module index.
 - Keep module READMEs focused on prerequisites, usage, output directory rules, caveats, and platform support for that module.
+- Keep `CONTRIBUTING.md` aligned with the active module list, validation commands, issue-template expectations, and security/privacy rules.
+- Keep `CODE_OF_CONDUCT.md` focused on respectful collaboration and security-sensitive discussion norms.
 - Do not embed the full scripts into documentation.
 - Keep script logic explanations in separate Markdown files under the module-local `docs/` directory with Mermaid diagrams.
 - Documentation examples must use placeholders or generic values, not real terminal output copied from a user machine.
